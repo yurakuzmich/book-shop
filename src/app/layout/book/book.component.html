@@ -1,9 +1,12 @@
 <h2 class="head">Our books</h2>
+
+<kzmch-cart [order]="orderedBooks"></kzmch-cart>
+
 <div class="books">
-  <div *ngFor="let book of books">
+  <div *ngFor="let book of books; let i=index">
     <div class="book">
       <div class="book__name">
-        {{ book.name }}
+        {{ i + 1 }}. {{ book.name }}
       </div>
       <div class="book__description">
         {{ book.description }}
@@ -20,7 +23,7 @@
         </div>
       </div>
       <div class="book__buy">
-        <button [disabled]="!book.isAvailable" (click)="onBuy(book.name)">
+        <button [disabled]="!book.isAvailable" (click)="onBuy(i)">
           BUY
         </button>
       </div>

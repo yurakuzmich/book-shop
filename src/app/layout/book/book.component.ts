@@ -63,11 +63,15 @@ export class BookComponent implements OnInit {
     },
   ];
 
+  orderedBooks: IBook[] = [];
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  onBuy(bookName: string) {
-    alert(`Book "${bookName}" added to cart`);
+  onBuy(i: number) {
+    alert(`Book "${this.books[i].name}" added to cart`);
+    this.orderedBooks = [...this.orderedBooks, this.books[i]];
+    console.log(this.orderedBooks);
   }
 }
