@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IBook } from '../../book/book.component';
+import { BooksService, IBook } from '../../../services/books.service';
 
 @Component({
   selector: 'kzmch-cart-item',
@@ -9,10 +9,18 @@ import { IBook } from '../../book/book.component';
 export class CartItemComponent implements OnInit {
 
   @Input() orderedItem: IBook;
+  @Input() i: number;
   
-  constructor() { }
+  constructor(orderlist: BooksService) {
+    this.i = -1;
+    this.orderedItem = orderlist.orderedBooks[this.i];
+   }
 
   ngOnInit(): void {
+  }
+
+  onDelete() {
+    console.log(`The book "${this.orderedItem.name}" deleted from cart`);
   }
 
 }

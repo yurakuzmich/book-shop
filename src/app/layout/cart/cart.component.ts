@@ -1,17 +1,23 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IBook } from '../book/book.component';
+import { BooksService, IBook } from 'src/app/services/books.service';
 
 @Component({
   selector: 'kzmch-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+  styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
+  order: IBook[] = [];
+  orderList: BooksService;
 
-  @Input() order: IBook;
-  
-  constructor() { }
+  constructor(orderlist: BooksService) {
+    this.order = orderlist.orderedBooks;
+    this.orderList = orderlist;
+  }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
+  ngOnChange(): void {
+    this.order = this.orderList.orderedBooks;
+  }
 }
