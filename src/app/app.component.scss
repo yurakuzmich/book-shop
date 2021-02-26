@@ -1,0 +1,21 @@
+.container {
+    margin: 0 auto;
+    width: 1120px;
+    
+    display: flex;
+    flex-wrap: nowrap;  
+}
+
+.main {
+    width: 100%;
+    flex-shrink: 1;
+    border: 1px solid red;
+
+}
+
+.sidebar {
+    width: 100%;
+    flex-shrink: 3;
+    border: 1px solid red;
+}
+

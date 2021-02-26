@@ -1,6 +1,0 @@
-<div *ngIf="order">
-  <div *ngFor="let item of order; let i=index">
-      {{ i }}. {{ item.name }}
-    <kzmch-cart-item [orderedItem]="item" [i]="i"></kzmch-cart-item>
-  </div>
-</div>
