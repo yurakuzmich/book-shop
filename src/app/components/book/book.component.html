@@ -1,18 +1,26 @@
 <div class="book__wrapper">
-    <h1 class="book_title">
-        {{ currentBook.name }}
-    </h1>
-    <div class="book__category">
-       <p>Category: {{ currentBook.category }}</p> 
-       <p>Created: {{ currentBook.createDate }}</p>
+  <div class="book__select">
+    <div *ngFor="let book of booksList; let i = index">
+      <p>{{ book.name }} <button (click)="onSelectBook(i)">Select</button></p>
     </div>
-    <div class="book__decription">
-        {{ currentBook.description }}
-    </div>
-    <div class="book__price">
-        {{ currentBook.price }}
-    </div>
-    <div class="book_buy">
-        <button (click)="onBuy()">BUY</button>
-    </div>
+  </div>
+  <h1 class="book_title">
+    {{ currentBook.name }}
+  </h1>
+  <div class="book__category">
+    <p>Category: {{ currentBook.category }}</p>
+    <p>Created: {{ currentBook.createDate }}</p>
+  </div>
+  <div class="book__decription">
+    {{ currentBook.description }}
+  </div>
+  <div class="book__isavalible">
+    {{ currentBook.isAvailable }}
+  </div>
+  <div class="book__price">
+    {{ currentBook.price }}
+  </div>
+  <div class="book_buy">
+    <button [disabled]="!currentBook.isAvailable" (click)="onBuy()">BUY</button>
+  </div>
 </div>
