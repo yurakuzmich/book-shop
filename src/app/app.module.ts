@@ -7,6 +7,7 @@ import { BookComponent } from './components/book/book.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CartItemComponent } from './components/cart/cart-item/cart-item.component';
 import { BooksListComponent } from './components/books-list/books-list.component';
+import { CartListComponent } from './components/cart/cart-list/cart-list.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { BooksListComponent } from './components/books-list/books-list.component
     CartComponent,
     CartItemComponent,
     BooksListComponent,
+    CartListComponent,
   ],
   imports: [
     BrowserModule,

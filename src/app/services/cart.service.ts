@@ -14,4 +14,8 @@ export class CartService {
   addBook(book: IBook) {
     this.addedToCart = [...this.addedToCart, {book: book, quantity: 1}];
   }
+
+  getOrderedBooks() {
+    return this.addedToCart;
+  }
 }
