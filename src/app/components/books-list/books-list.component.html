@@ -4,7 +4,7 @@
         <div>{{ book.description }}</div>
         <div>{{ book.price }}</div>
         <div>
-            <button [disabled]="!book.isAvailable">BUY</button>
+            <button [disabled]="!book.isAvailable" (click)="onBuy(book)">BUY</button>
         </div>
     </div>
 </div>
