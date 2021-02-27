@@ -1,21 +1,25 @@
 .container {
     margin: 0 auto;
-    width: 1120px;
+    max-width: 1120px;
     
     display: flex;
-    flex-wrap: nowrap;  
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
 }
 
 .main {
     width: 100%;
+    padding: 20px;
     flex-shrink: 1;
-    border: 1px solid red;
-
+    border: 2px solid rgb(163, 156, 156);
+    border-radius: 5px;
 }
 
 .sidebar {
+    padding: 20px;
     width: 100%;
-    flex-shrink: 2;
-    border: 1px solid red;
+    border: 2px solid rgb(163, 156, 156);
+    border-radius: 5px;
 }
 

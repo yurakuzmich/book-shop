@@ -12,7 +12,7 @@ export class CartService {
   constructor() { }
 
   addBook(book: IBook) {
-    this.addedToCart = [...this.addedToCart, {book: book, quantity: 1}];
+    this.addedToCart = [...this.addedToCart, {bookSpec: book, quantity: 1}];
   }
 
   getOrderedBooks() {

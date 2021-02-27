@@ -1,6 +1,6 @@
 import { IBook } from "./book";
 
 export interface ICart {
-    book: IBook;
+    bookSpec: IBook;
     quantity: number;
 }
