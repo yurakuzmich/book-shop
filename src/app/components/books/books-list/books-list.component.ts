@@ -19,6 +19,7 @@ export class BooksListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.booksList)
   }
 
   onBuy(book: IBook) {

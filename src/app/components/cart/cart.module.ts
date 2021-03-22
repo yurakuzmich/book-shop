@@ -6,7 +6,6 @@ import { CartListComponent } from './cart-list/cart-list.component';
 import { RouterModule } from '@angular/router';
 
 
-
 @NgModule({
   declarations: [
     CartComponent,
